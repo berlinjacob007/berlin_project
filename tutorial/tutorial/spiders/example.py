@@ -17,4 +17,4 @@ class ExampleSpider(scrapy.Spider):
         #       'event_name': response.xpath('//div[@class="pd-lr-10 span9"]/h1[1]/text()').extract(),
         #      'EB': response.xpath('//div[@class="name"]/span[1]/text()').extract(),
                 }
-        #  print '*************************************************'
+        print '*************************************************'
