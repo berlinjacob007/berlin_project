@@ -9,9 +9,9 @@ class ExampleSpider(scrapy.Spider):
     def parse(self, response):
 	print '**********************************************'
         #print response.body
-        print response.xpath('//ul[@class="meta-list"]/li[1]/text()').extract()[0].strip()
-        print response.xpath('//div[@class="pd-lr-10 span9"]/h1[1]/text()').extract()[0].strip()
-        print response.xpath('//div[@class="name"]/span[1]/text()').extract()[0].strip()
+        print response.xpath('//ul[@class="meta-list"]/li[1]/text()').extract()[0].strip()         #date
+        print response.xpath('//div[@class="pd-lr-10 span9"]/h1[1]/text()').extract()[0].strip()   #Discover your brillience
+        print response.xpath('//div[@class="name"]/span[1]/text()').extract()[0].strip()           #emerging brillience
         #yield {
         #        'date': response.xpath('//ul[@class="meta-list"]/li[1]/text()').extract(),
         #       'event_name': response.xpath('//div[@class="pd-lr-10 span9"]/h1[1]/text()').extract(),
