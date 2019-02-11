@@ -8,10 +8,13 @@ class ExampleSpider(scrapy.Spider):
     start_urls = ['https://allevents.in/new%20delhi/discover-your-brilliance/939513959466235']
 
     def parse(self, response):
-                
+         url = response.xpath('//*[@id="event-detail-fade"]/div[3]/div[1]/div[2]/div/img/@data-original').extract()[0].strip() # FOR MAP
+         #print url
+         url =url.split('|')
+         print latitude and longitude are,url[1]               
                 
 	
-        yield {
+         yield {
 
                 'event_name':response.xpath('//*[@id="event-detail-fade"]/div[1]/div[2]/h1/text()').get(),
                 'time': response.xpath('//*[@id="event-detail-fade"]/div[1]/div[2]/ul/li[1]/text()').get(),
